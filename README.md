@@ -8,5 +8,5 @@
 
 2. Bubble sort
 
- Worst and average case complexity: O(N^2).
+ Worst and average case complexity: O(N^2). 
  This is due to the double loop which sorts N items each.
