@@ -58,12 +58,12 @@ int main(){
     printf("Random number %d is %d\n", i, sortArr[i]);
     sleep(1); // to make random seed different
   }
-
   MergeSort(sortArr, 0, n-1);
 
   printf("\nSorted array:\n|");
   for(i=0;i<n;i++)
     printf(" %d |", sortArr[i]);
+
   printf("\n\n");
   return 0;
 }
