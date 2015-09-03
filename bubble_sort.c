@@ -3,24 +3,22 @@
 
 int main(){
 
-  int i=0, sortArr[10];
+  int i=0, n=10, sortArr[n];
 
-  printf("########################\n");
+  printf("\n########################\n");
   printf("### BUBBLE SORT DEMO ###\n");
-  printf("########################\n");
+  printf("########################\n\n");
 
-  for(i=9;i>=0;i--)
+  for(i=n-1;i>=0;i--)
   {
     srand(time(NULL));
     sortArr[i] = rand()%2000;
-    printf("\nRandom number %d is %d\n", 9-i, sortArr[i]);
+    printf("Random number %d is %d\n", 9-i, sortArr[i]);
     sleep(1); // to make random seed different
   }
 
   // Bubble sort starts here
-  printf("\n### BUBBLE SORT STARTING... ###\n");
-  sleep(2);
-  for(i=0;i<10;i++)
+  for(i=0;i<n;i++)
   {
     int j;
     for(j=0;j<9-i;j++)  // j = 0,1,2,3,4,5,6,7,8
@@ -36,10 +34,8 @@ int main(){
   }
 
   // Print out the result
-  printf("\nSorted array:\n |");
-  for(i=0;i<10;i++)
-  {
+  printf("\nSorted array:\n|");
+  for(i=0;i<n;i++)
     printf(" %d |", sortArr[i]);
-  }
-  printf("\n");
+  printf("\n\n");
 }
