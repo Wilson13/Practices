@@ -31,3 +31,11 @@ Worst and average case complexity: O(nlogn).
         - Then compare 1A[1] vs 2A[0]. If 1A[1] is smaller, store 1A[1] into B[1].
         - Then store 2A[0] & 2A[1] into B[2-3].
         - Copy B[0-3]  into A[0-3]
+
+4. Quick Sort
+
+A divide and conquer algorithm developed by Tony Hoare in 1959.
+
+Worst case complexity: O(nlogn),  average case complexity: O(n^2).
+
+In the code, the leftmost element is selected as the pivot which results in worst case when applied on sorted elements. Randomly selecting or selecting the median of the first, middle, and last element solves this problem.
