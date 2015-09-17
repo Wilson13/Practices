@@ -12,7 +12,7 @@
  This is due to the double loop which sorts N items each.  
  "This technique is called bubble sort or sinking sort because the smaller values gradually "bubble" their way upward to the top of the aaray like air bubbles rising in water, while the larger values sink to the bottom of the array. "
 
-3. Merge Sort
+3. Merge Sort  
 
 A divide and conquer algorithm developed by John Von Neumann.  
 Worst and average case complexity: O(nlogn).  
