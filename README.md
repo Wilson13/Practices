@@ -38,8 +38,4 @@ Worst case complexity: O(n^2),  average case complexity: O(nlogn).
 
 In the code, the leftmost element is selected as the pivot which results in worst case when applied on sorted elements. Randomly selecting or selecting the median of the first, middle, and last element solves this problem.
 
-5. Preprocessor
-
-Using the #define statement, how would you declare a manifest constant that returns the number of seconds in a year? Disregard leap years in your answer. A manifest constant is a constant value associated with a smbolic name (constant that is given a name).
-
 *The complexity of an algorithm roughly describes the number of operations (i.e. comparisons in sorting) it requires.
