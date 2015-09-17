@@ -14,8 +14,8 @@
 
 3. Merge Sort  
 
-A divide and conquer algorithm developed by John Von Neumann.  
-Worst and average case complexity: O(nlogn).  
+  A divide and conquer algorithm developed by John Von Neumann.  
+  Worst and average case complexity: O(nlogn).  
 
   Algorithm:  
 
