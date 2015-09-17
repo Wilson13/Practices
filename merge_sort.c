@@ -5,6 +5,7 @@ void Merge(int sortArr[], int start, int middle, int end)
 {
   int leftIdx = start, rightIdx = middle, tmpArrPivot=start, tempArr[end+1], i;
 
+  // Sorting is done over here
   // While elements exist
   while(leftIdx<middle && rightIdx<=end)
   {
@@ -20,6 +21,7 @@ void Merge(int sortArr[], int start, int middle, int end)
       rightIdx++;
     }
   }
+  // Conquer is done over here
   // Copy remaining elements to tempArr if exist
   while(leftIdx<middle && tmpArrPivot<=end)
     tempArr[tmpArrPivot++] = sortArr[leftIdx++];
@@ -61,7 +63,7 @@ int main(){
 
   MergeSort(sortArr, 0, n-1);
   printf("\nSorted array:\n|");
-  
+
   for(i=0;i<n;i++)
     printf(" %d |", sortArr[i]);
 
