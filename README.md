@@ -19,10 +19,10 @@ Worst and average case complexity: O(nlogn).
 
   Algorithm:  
 
-  1. Divide the array into halves.
+  i. Divide the array into halves.
       - If only one element exists, it is sorted; else, divide the array [A] into halves.
 
-  2. Merge the sorted array (sorting is also done over here).
+  ii. Merge the sorted array (sorting is also done over here).
       - Compare the leftmost element from both arrays 1A & 2A, store the smallest element, gradually moving upward.
       - Store remaining elements if comparison is completed.  
 
