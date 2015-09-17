@@ -33,9 +33,9 @@
 
 4. Quick Sort
 
-A divide and conquer algorithm developed by Tony Hoare in 1959.
-Worst case complexity: O(n^2),  average case complexity: O(nlogn).
+  A divide and conquer algorithm developed by Tony Hoare in 1959.
+  Worst case complexity: O(n^2),  average case complexity: O(nlogn).
 
-In the code, the leftmost element is selected as the pivot which results in worst case when applied on sorted elements. Randomly selecting or selecting the median of the first, middle, and last element solves this problem.
+  In the code, the leftmost element is selected as the pivot which results in worst case when applied on sorted elements. Randomly selecting or selecting the median of the first, middle, and last element solves this problem.
 
 *The complexity of an algorithm roughly describes the number of operations (i.e. comparisons in sorting) it requires.
