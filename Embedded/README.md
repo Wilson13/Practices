@@ -54,6 +54,7 @@ Preprocessor
 7. Embedded systems are often characterized by requiring the programmer to access a specific memory location. On a certain project it is required to set an integer variable at the absolute address 0x67a9 to the value 0xaa55. The compiler is a pure ANSI compiler. Write code to accomplish this task.
 
   Ans:
+  
   int \*ptr = (int \*)0x67a9;  
   \*ptr = 0xaa55;  
 
