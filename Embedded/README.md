@@ -77,6 +77,7 @@ Preprocessor
   In addition, it can never be called from the serial ISR. The library code for printf() is large (about 1kb) and slow to execute. This will dramatically affect the performance of your ISR and therefore your application. In addition it may adversely affect the behavior of your application.
 
   If you wish to display state information then you have other options. For example changing the state of I/O pins or (if you are using tScope) putting the state in an xdata variable and watching the value.  
+  
   \*source: http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.faqs/ka9314.html
 
 
