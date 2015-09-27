@@ -69,7 +69,7 @@ Preprocessor
 Ans:
 1. Interrupt Service Routine cannot have a return type.<br />
 2. ISRs cannot pass a parameter.<br />
-3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.<br /><br />
+3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.<br />
 
   printf() is not reentrant so unless interrupts are disabled while calling it, it cannot be called from main code or from any other interrupt that does not have the same priority as the CAN ISR.
   <br /><br />
