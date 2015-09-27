@@ -18,7 +18,7 @@ Preprocessor
 
   Infinite loops often arise in embedded systems. How does one code an infinite loop in C?
 
-  Ans:
+  Ans:  
   int main(){  
     while(1)  
     {  
