@@ -30,48 +30,43 @@ Preprocessor
 5. Data declarations
   Using the variable a, write down definitions for the following:
 
-  (a) An integer
-      int a;
-  (b) A pointer to an integer
-      int \*a;
-  (c) A pointer to a pointer to an integer
-      int \**a;
-  (d) An array of ten integers
-      int a[10];
-  (e) An array of ten pointers to integers
-      int \*a[10];
-  (f) A pointer to an array of ten integers
-      int (\*a)[10];
-  (g) A pointer to a function that takes an integer as an argument and returns an integer
-      int (\*a)(int);
-  (h) An array of ten pointers to functions that take an integer argument and return an integer.
-      int (\*a[10])(int)
+  (a) An integer  
+      int a;  
+  (b) A pointer to an integer  
+      int \*a;  
+  (c) A pointer to a pointer to an integer  
+      int \**a;  
+  (d) An array of ten integers  
+      int a[10];  
+  (e) An array of ten pointers to integers  
+      int \*a[10];  
+  (f) A pointer to an array of ten integers  
+      int (\*a)[10];  
+  (g) A pointer to a function that takes an integer as an argument and returns an integer  
+      int (\*a)(int);  
+  (h) An array of ten pointers to functions that take an integer argument and return an integer.  
+      int (\*a[10])(int)  
 
 6. Embedded systems always require the user to manipulate bits in registers or variables.
 
-Given an integer variable a, write two code fragments. The first should set bit 3 of a. The second should clear bit 3 of a. In both cases, the remaining bits should be unmodified.
+  Given an integer variable a, write two code fragments. The first should set bit 3 of a. The second should clear bit 3 of a. In both cases, the remaining bits should be unmodified.
 
 7. Embedded systems are often characterized by requiring the programmer to access a specific memory location. On a certain project it is required to set an integer variable at the absolute address 0x67a9 to the value 0xaa55. The compiler is a pure ANSI compiler. Write code to accomplish this task.
 
-  Answer:
-  int \*ptr = (int \*)0x67a9;
-  \*ptr = 0xaa55;
+  Ans:
+  int \*ptr = (int \*)0x67a9;  
+  \*ptr = 0xaa55;  
 
 8.  Interrupts are an important part of embedded systems. Consequently, many compiler vendors offer an extension to standard C to support interrupts. Typically, this new key word is \__interrupt. The following code uses \__interrupt to define an interrupt service routine. Comment on the code.
 
-\__interrupt double compute_area(double radius) {
+  \__interrupt double compute_area(double radius) {
+  {
+    double area = PI * radius * radius;
+    printf(“\nArea = %f”, area);
+    return area;
+  }
 
-{
-
-double area = PI * radius * radius;
-
-printf(“\nArea = %f”, area);
-
-return area;
-
-}
-
-Answer:
+Ans:
 1. Interrupt Service Routine cannot have a return type.
 2. ISRs cannot pass a parameter.
 3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.
