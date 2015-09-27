@@ -59,14 +59,14 @@ Preprocessor
 
 8.  Interrupts are an important part of embedded systems. Consequently, many compiler vendors offer an extension to standard C to support interrupts. Typically, this new key word is \__interrupt. The following code uses \__interrupt to define an interrupt service routine. Comment on the code.
 
-  \__interrupt double compute_area(double radius) {
+  \__interrupt double compute_area(double radius)
   {
     double area = PI * radius * radius;
     printf(“\nArea = %f”, area);
     return area;
   }
 
-Ans:
+Ans:<br />
 1. Interrupt Service Routine cannot have a return type.<br />
 2. ISRs cannot pass a parameter.<br />
 3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.<br />
