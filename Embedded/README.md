@@ -54,27 +54,29 @@ Preprocessor
 
 7. Embedded systems are often characterized by requiring the programmer to access a specific memory location. On a certain project it is required to set an integer variable at the absolute address 0x67a9 to the value 0xaa55. The compiler is a pure ANSI compiler. Write code to accomplish this task.
 
-  Ans:<br />
-  int \*ptr = (int \*)0x67a9;
+  Ans:  
+  int \*ptr = (int \*)0x67a9;  
   \*ptr = 0xaa55;  
 
 8.  Interrupts are an important part of embedded systems. Consequently, many compiler vendors offer an extension to standard C to support interrupts. Typically, this new key word is \__interrupt. The following code uses \__interrupt to define an interrupt service routine. Comment on the code.
 
-  \__interrupt double compute_area(double radius)<br />
-  {<br />
-    double area = PI * radius * radius;<br />
-    printf(“\nArea = %f”, area);<br />
-    return area;<br />
-  }<br />
+  \__interrupt double compute_area(double radius)  
+  {  
+    double area = PI * radius * radius;  
+    printf(“\nArea = %f”, area);  
+    return area;  
+  }  
 
-  Ans:<br />
-  1. Interrupt Service Routine cannot have a return type.<br />
-  2. ISRs cannot pass a parameter.<br />
-  3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.<br />
+  Ans:  
+  1. Interrupt Service Routine cannot have a return type.  
+  2. ISRs cannot pass a parameter.  
+  3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.  
 
   printf() is not reentrant so unless interrupts are disabled while calling it, it cannot be called from main code or from any other interrupt that does not have the same priority as the CAN ISR.
-  <br /><br />
-  In addition, it can never be called from the serial ISR. The library code for printf() is large (about 1kb) and slow to execute. This will dramatically affect the performance of your ISR and therefore your application. In addition it may adversely affect the behavior of your application.
+
+  In addition, it can never be called from the serial ISR. The library code for printf() is large (about 1kb) and slow to execute. This will dramatically affect the performance of your ISR and therefore your application.
+
+  In addition it may adversely affect the behavior of your application.
   If you wish to display state information then you have other options. For example changing the state of I/O pins or (if you are using tScope) putting the state in an xdata variable and watching the value.
   \*source: http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.faqs/ka9314.html
 
