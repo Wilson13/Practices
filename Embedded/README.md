@@ -35,7 +35,7 @@ Preprocessor
   (b) A pointer to an integer  
       int \*a;  
   (c) A pointer to a pointer to an integer  
-      int \**a;  
+      int \*\*a;  
   (d) An array of ten integers  
       int a[10];  
   (e) An array of ten pointers to integers  
