@@ -18,34 +18,34 @@ Preprocessor
 
   Infinite loops often arise in embedded systems. How does one code an infinite loop in C?
 
-  Answer:
-  int main(){
-    while(1)
-    {
-      // perform operations
-    }
-    return 0;
+  Ans:
+  int main(){  
+    while(1)  
+    {  
+      // perform operations  
+    }  
+    return 0;  
   }
 
 5. Data declarations
-Using the variable a, write down definitions for the following:
+  Using the variable a, write down definitions for the following:
 
-(a) An integer
-    int a;
-(b) A pointer to an integer
-    int \*a;
-(c) A pointer to a pointer to an integer
-    int \**a;
-(d) An array of ten integers
-    int a[10];
-(e) An array of ten pointers to integers
-    int \*a[10];
-(f) A pointer to an array of ten integers
-    int (\*a)[10];
-(g) A pointer to a function that takes an integer as an argument and returns an integer
-    int (\*a)(int);
-(h) An array of ten pointers to functions that take an integer argument and return an integer.
-    int (\*a[10])(int)
+  (a) An integer
+      int a;
+  (b) A pointer to an integer
+      int \*a;
+  (c) A pointer to a pointer to an integer
+      int \**a;
+  (d) An array of ten integers
+      int a[10];
+  (e) An array of ten pointers to integers
+      int \*a[10];
+  (f) A pointer to an array of ten integers
+      int (\*a)[10];
+  (g) A pointer to a function that takes an integer as an argument and returns an integer
+      int (\*a)(int);
+  (h) An array of ten pointers to functions that take an integer argument and return an integer.
+      int (\*a[10])(int)
 
 6. Embedded systems always require the user to manipulate bits in registers or variables.
 
@@ -56,6 +56,29 @@ Given an integer variable a, write two code fragments. The first should set bit 
   Answer:
   int \*ptr = (int \*)0x67a9;
   \*ptr = 0xaa55;
+
+8.  Interrupts are an important part of embedded systems. Consequently, many compiler vendors offer an extension to standard C to support interrupts. Typically, this new key word is \__interrupt. The following code uses \__interrupt to define an interrupt service routine. Comment on the code.
+
+\__interrupt double compute_area(double radius) {
+
+{
+
+double area = PI * radius * radius;
+
+printf(“\nArea = %f”, area);
+
+return area;
+
+}
+
+Answer:
+1. Interrupt Service Routine cannot have a return type.
+2. ISRs cannot pass a parameter.
+3. printf() should work inside the CAN ISR however this will introduce many areas for potential problems.
+  printf() is not reentrant so unless interrupts are disabled while calling it, it cannot be called from main code or from any other interrupt that does not have the same priority as the CAN ISR. In addition, it can never be called from the serial ISR. The library code for printf() is large (about 1kb) and slow to execute. This will dramatically affect the performance of your ISR and therefore your application. In addition it may adversely affect the behavior of your application.
+  If you wish to display state information then you have other options. For example changing the state of I/O pins or (if you are using tScope) putting the state in an xdata variable and watching the value.
+  *source: http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.faqs/ka9314.html
+
 
 *source: http://www.rmbconsulting.us/a-c-test-the-0x10-best-questions-for-would-be-embedded-programmers
 * use -pedantic to see warnings about statements not supported by ISO C but do in GNU C language extension.
