@@ -38,4 +38,21 @@
 
   In the code, the leftmost element is selected as the pivot which results in worst case when applied on sorted elements. Randomly selecting or selecting the median of the first, middle, and last element solves this problem.
 
+5. Prime number
+
+  - Given a positive integer A (greater than 1), determine whether it is a prime number.
+
+  - Definition of prime number: A number is greater than 1 is called a prime number, if it has only two factors, namely 1 and the number itself.
+
+  - Formula/Algorithm:
+
+    1. Find a whole number which is greater and nearest to the square root of A, namely K.
+    2. Determine whether A is divisible by any prime number smaller than K.
+      - If it is divisible, it is not a prime number;
+      - Else, it is a prime number.
+
+  *source:  
+  http://planetmath.org/howtofindwhetheragivennumberisprimeornot  
+  http://mathforum.org/isaac/problems/prime2.html (better version)
+
 *The complexity of an algorithm roughly describes the number of operations (i.e. comparisons in sorting) it requires.
