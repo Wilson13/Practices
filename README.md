@@ -51,8 +51,10 @@
       - If it is divisible, it is not a prime number;
       - Else, it is a prime number.
 
-  *source:  
+  \*source:  
   http://planetmath.org/howtofindwhetheragivennumberisprimeornot  
   http://mathforum.org/isaac/problems/prime2.html (better version)
+
+6. Linked List
 
 *The complexity of an algorithm roughly describes the number of operations (i.e. comparisons in sorting) it requires.
