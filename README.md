@@ -57,4 +57,6 @@
 
 6. Linked List
 
+7. Reverse a given decimal
+8. 
 *The complexity of an algorithm roughly describes the number of operations (i.e. comparisons in sorting) it requires.
