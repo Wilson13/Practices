@@ -22,9 +22,9 @@ int main(int argc, char *argv[])
     numbers[2] = 3;
     numbers[3] = 4;
 
-		// Assign the characters into numbers and then use printf to print them a character at a time.
-		// What kind of compiler warnings did you get?
-		numbers2[0] = 'a';
+	// Assign the characters into numbers and then use printf to print them a character at a time.
+	// What kind of compiler warnings did you get?
+	numbers2[0] = 'a';
     numbers2[1] = 'a';
     numbers2[2] = 'a';
     numbers2[3] = 97;
@@ -41,9 +41,15 @@ int main(int argc, char *argv[])
             numbers[0], numbers[1],
             numbers[2], numbers[3]);
 
-		printf("numbers2: %d %d %d %c\n",
+	printf("Print numbers2 as decimals: %d %d %d %d\n",
             numbers2[0], numbers2[1],
             numbers2[2], numbers2[3]);
+
+    printf("Print numbers2 as characters: %c %c %c %c\n",
+            numbers2[0], numbers2[1],
+            numbers2[2], numbers2[3]);
+
+    printf("Print 0 as character: %c\n", 0);
 
     printf("name each: %c %c %c %c\n",
             name[0], name[1],
