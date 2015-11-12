@@ -32,6 +32,7 @@ void print_letters(char arg[], int len)
 
 int main(int argc, char *argv[])
 {
-    print_arguments(argc, argv);
+    //print_arguments(argc, argv);
+    printf("The size of an int is: %lu\n", sizeof(int));
     return 0;
 }
