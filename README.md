@@ -59,4 +59,8 @@
 
 7. Reverse a given decimal
 
+8. Base number conversion
+
+9. Reverse a given string
+
 *The complexity of an algorithm roughly describes the number of operations (i.e. comparisons in sorting) it requires.
