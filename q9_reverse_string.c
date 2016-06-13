@@ -7,8 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main() {
-
+int main()
+{
   char input_str[10];
   char temp_char;
   int i = 0;
